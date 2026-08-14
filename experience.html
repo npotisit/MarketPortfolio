@@ -5,24 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience — Nathan Potisit</title>
 <link rel="stylesheet" href="style.css">
-<style>
-/* Force landscape-style display for evidence images while preserving the full-width layout.
-   object-fit: cover will fill the landscape frame and crop excess so vertical images look landscape.
-*/
-.evidence-photo.landscape img,
-.evidence-page.landscape img {
-  width: 100%;
-  height: 220px; /* landscape frame height */
-  object-fit: cover; /* crop to fill the landscape frame */
-  display: block;
-}
-@media (min-width: 768px) {
-  .evidence-photo.landscape img,
-  .evidence-page.landscape img {
-    height: 300px;
-  }
-}
-</style>
 </head>
 <body>
 
@@ -108,7 +90,6 @@
       </div>
       <div class="evidence">
         <div class="evidence-photo">
-          <!-- Insert project/team photo for OceanEdge here. Upload the PNG as 'oceanedge-photo.png' to the repo root or assets/ and this tag will reference it. -->
           <img src="oceanedge-team.png" alt="OceanEdge / V&A Waterfront project team photo">
         </div>
         <p class="evidence-caption">Project / team photo — OceanEdge (diiVe)</p>
@@ -119,33 +100,34 @@
     </div>
 
     <!-- CHAIR, STUDENTS' APPEAL BOARD -->
-<div class="entry">
-  <div class="entry-body">
-    <span class="meta">May 2023 – May 2026 · Richmond, VA · Leadership</span>
-    <h3>Chair, Students' Appeal Board — Dept. of Parking &amp; Transportation</h3>
-    <p class="role">Student leadership role, University of Richmond</p>
-    <p>
-      The department's parking permit and appeal process relied on
-      manual handling that created backlogs and inconsistent data across
-      thousands of records. As Chair, my task was to lead the student
-      side of that process while keeping the underlying data clean and
-      reliable. I processed 800+ permits, resolved 50+ weekly inquiries,
-      delegated 200+ student appeal hearings, and streamlined 5,000+
-      parking records while training new student staff. This hands-on
-      view of the department's process pain points directly shaped the
-      SQL optimization project I built afterward.
-    </p>
-  </div>
-  <div class="evidence">
-    <div class="evidence-photo landscape contain">
-      <img src="parkingimage.png" alt="University of Richmond Parking & Transportation">
+    <div class="entry">
+      <div class="entry-body">
+        <span class="meta">May 2023 – May 2026 · Richmond, VA · Leadership</span>
+        <h3>Chair, Students' Appeal Board — Dept. of Parking &amp; Transportation</h3>
+        <p class="role">Student leadership role, University of Richmond</p>
+        <p>
+          The department's parking permit and appeal process relied on
+          manual handling that created backlogs and inconsistent data across
+          thousands of records. As Chair, my task was to lead the student
+          side of that process while keeping the underlying data clean and
+          reliable. I processed 800+ permits, resolved 50+ weekly inquiries,
+          delegated 200+ student appeal hearings, and streamlined 5,000+
+          parking records while training new student staff. This hands-on
+          view of the department's process pain points directly shaped the
+          SQL optimization project I built afterward.
+        </p>
+      </div>
+      <div class="evidence">
+        <div class="evidence-photo landscape contain">
+          <img src="parkingimage.png" alt="University of Richmond Parking & Transportation">
+        </div>
+        <p class="evidence-caption">Dept. of Parking &amp; Transportation</p>
+        <div class="evidence-links">
+          <a href="projects.html#sql-project">View related project →</a>
+        </div>
+      </div>
     </div>
-    <p class="evidence-caption">Dept. of Parking &amp; Transportation</p>
-    <div class="evidence-links">
-      <a href="projects.html#sql-project">View related project →</a>
-    </div>
-  </div>
-</div>
+
   </div>
 </section>
 
