@@ -28,16 +28,21 @@
     <p class="eyebrow">Resume</p>
     <h1 style="font-size:clamp(2rem,4vw,2.8rem);">The one-page version of everything on this site.</h1>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="assets/resume.pdf" download>Download PDF</a>
-      <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      <a class="btn btn-primary" href="Potisit_Nathan_Resume.docx" download>Download DOCX</a>
+      <a class="btn btn-ghost" href="Potisit_Nathan_Resume.docx" target="_blank" rel="noopener">Open DOCX</a>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <embed class="resume-embed" src="assets/resume.pdf" type="application/pdf">
-    <p class="todo">TODO &mdash; add your finalized resume PDF at <code>assets/resume.pdf</code> in this repo. If the embed doesn't render on mobile (common with the &lt;embed&gt; tag on iOS Safari), the Download and Open buttons above still work &mdash; that's why both are included.</p>
+    <!-- Embedded DOCX viewer using Microsoft Office Online viewer. File must be publicly accessible. -->
+    <iframe class="resume-embed"
+      src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fnpotisit%2FMarketPortfolio%2Fmain%2FPotisit_Nathan_Resume.docx"
+      frameborder="0" allowfullscreen>
+    </iframe>
+
+    <p class="todo">If the embedded preview does not render, download the DOCX using the button above. You can also convert the DOCX to PDF and upload it to <code>assets/resume.pdf</code> if you prefer a PDF embed.</p>
   </div>
 </section>
 
