@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Nathan Potisit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">N<span>·</span>Potisit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="commercial-awareness.html">Market View</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding-top:64px;">
+  <div class="wrap">
+    <p class="eyebrow">Work Evidence</p>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);">Two projects, built end to end.</h1>
+    <p class="lede">
+      Both follow Situation → Task → Action → Result, with the actual
+      deliverable previewed alongside. Consulting client work (Lawn Die,
+      the V&amp;A Waterfront Blue Lease) lives on the
+      <a href="experience.html">Experience page</a> instead, since it's
+      tied to a specific role.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <!-- SQL PROJECT -->
+    <div class="entry" id="sql-project">
+      <div class="entry-body">
+        <span class="meta">Data &amp; Process · SQL · UR Business Process Optimization Project</span>
+        <h3>Parking Citation SQL Optimization</h3>
+        <p class="role">3-person team, working directly with Parking &amp; Transportation leadership</p>
+        <p>
+          Parking &amp; Transportation's citation workflow ran on fully manual
+          review, with no way to systematically catch officer errors or
+          track processing bottlenecks. Working directly with the
+          department's Director and Assistant Director, my task was to
+          redesign the data structure and automate the review process. I
+          led the SQL development — building new tables, INSERT/UPDATE
+          triggers, a stored procedure for officer-level mistake rates,
+          and Tableau visualizations. The project uncovered a 2.6% manual
+          citation error rate and cut query time from 0.1 seconds to
+          under 0.0043 seconds.
+        </p>
+        <div class="tags">
+          <span class="tag-pill">SQL</span>
+          <span class="tag-pill">Triggers &amp; Stored Procedures</span>
+          <span class="tag-pill">Query Optimization</span>
+          <span class="tag-pill">Tableau</span>
+        </div>
+      </div>
+      <div class="evidence">
+        <div class="evidence-page">
+          <img src="assets/projects/sql-citation-cover-01.png" alt="Parking citation SQL project deck, cover page">
+        </div>
+        <p class="evidence-caption">Final presentation deck</p>
+        <div class="evidence-links">
+          <a href="assets/projects/sql-citation-deck.pdf" target="_blank" rel="noopener">View full deck (PDF)</a>
+          <a href="assets/projects/sql-citation-deck.pdf" download>Download PDF</a>
+          <a href="assets/projects/parking-citation-code.sql" download>Download SQL code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GENAI AGENT PROJECT -->
+    <div class="entry" id="genai-project">
+      <div class="entry-body">
+        <span class="meta">Applied AI · Data Analytics · Generative AI Course</span>
+        <h3>AI Job Search &amp; Resume Critique Agent System</h3>
+        <p class="role">Led design and development</p>
+        <p>
+          Job seekers without direct work experience often struggle to
+          search multiple job boards efficiently and tailor their resume
+          to each posting. For my Generative AI course, my task was to
+          lead the design and build of an agentic system to automate
+          this process end-to-end. I built a 6-agent workflow using
+          Google's ADK — an intake agent, three parallel job-board search
+          agents, a ranking agent, and a resume critique agent, all
+          orchestrated by a coordinator with a self-correcting search
+          loop. Testing it against my own profile, the system correctly
+          followed instructions and returned 5–10 relevant listings
+          across all three platforms.
+        </p>
+        <div class="tags">
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">Google ADK</span>
+          <span class="tag-pill">Prompt Engineering</span>
+          <span class="tag-pill">Agentic System Design</span>
+          <span class="tag-pill">API Integration</span>
+        </div>
+      </div>
+      <div class="evidence">
+        <div class="evidence-page">
+          <img src="assets/projects/genai-cover-01.png" alt="GenAI agent workflow document, cover page">
+        </div>
+        <p class="evidence-caption">Workflow &amp; agent documentation</p>
+        <div class="evidence-links">
+          <a href="assets/projects/genai-agent-workflow.pdf" target="_blank" rel="noopener">View full document (PDF)</a>
+          <a href="assets/projects/genai-agent-workflow.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Nathan Potisit</span>
+    <span><a href="mailto:potin26@wfu.edu">potin26@wfu.edu</a> &middot; <a href="https://www.linkedin.com/in/nathan-potisit/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

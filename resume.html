@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume — Nathan [Last Name]</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">N<span>·</span>[Last Name]</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="commercial-awareness.html">Market View</a></li>
+      <li><a href="resume.html" aria-current="page">Resume</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" style="padding-top:64px;">
+  <div class="wrap">
+    <p class="eyebrow">Resume</p>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);">The one-page version of everything on this site.</h1>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="assets/resume.pdf" download>Download PDF</a>
+      <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <embed class="resume-embed" src="assets/resume.pdf" type="application/pdf">
+    <p class="todo">TODO &mdash; add your finalized resume PDF at <code>assets/resume.pdf</code> in this repo. If the embed doesn't render on mobile (common with the &lt;embed&gt; tag on iOS Safari), the Download and Open buttons above still work &mdash; that's why both are included.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Nathan [Last Name]</span>
+    <span><a href="mailto:you@email.com">you@email.com</a> &middot; <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
