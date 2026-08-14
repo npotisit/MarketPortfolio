@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Experience — Nathan Potisit</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Force landscape-style display for evidence images while preserving the full-width layout.
+   object-fit: cover will fill the landscape frame and crop excess so vertical images look landscape.
+*/
+.evidence-photo.landscape img,
+.evidence-page.landscape img {
+  width: 100%;
+  height: 220px; /* landscape frame height */
+  object-fit: cover; /* crop to fill the landscape frame */
+  display: block;
+}
+@media (min-width: 768px) {
+  .evidence-photo.landscape img,
+  .evidence-page.landscape img {
+    height: 300px;
+  }
+}
+</style>
 </head>
 <body>
 
