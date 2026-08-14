@@ -443,8 +443,14 @@ section + section{ border-top: 1px solid var(--line); }
   border-radius: 1px;
 }
 .evidence-page.landscape{
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
+.evidence-page.contain img{
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper-dim);
+}
+
 .evidence-page img{
   width:100%; height:100%;
   object-fit: cover;
