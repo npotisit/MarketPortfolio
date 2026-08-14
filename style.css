@@ -39,18 +39,7 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-/* Global typography — ensure consistent fonts across the site */
-html, body, p, a, li, ul, ol, blockquote, input, textarea, select, button, label, span, div {
-  font-family: var(--body);
-  color: inherit;
-}
 code, pre { font-family: var(--mono); }
-
-/* Ensure form controls and interactive elements use the body font */
-input, textarea, select, button { font-family: var(--body); }
-
-/* Make headings use the display face explicitly */
-h1, h2, h3, h4, h5, h6 { font-family: var(--display); }
 
 a{ color: inherit; }
 img{ max-width: 100%; display:block; }
@@ -167,7 +156,7 @@ h1{ font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0
 h2{ font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; }
 h3{ font-size: 1.25rem; font-weight: 600; }
 p{ margin: 0 0 1em; color: var(--ink-soft); }
-.lede{ font-size: 1.15rem; color: var(--ink-soft); max-width: 62ch; }
+.lede{ font-size: 1.15rem; color: var(--ink-soft); max-width: 62ch; text-wrap: balance; }
 
 /* ---------- section rhythm ---------- */
 section{ padding: clamp(56px, 9vw, 108px) 0; }
@@ -200,12 +189,10 @@ section + section{ border-top: 1px solid var(--line); }
   width:100%;
   height:100%;
   object-fit:cover;
-  /* lower value to move you visually to the right inside the frame */
   object-position:40% center;
 }
 .hero-actions{ display:flex; gap: 14px; margin-top: 28px; flex-wrap:wrap; }
 
-/* responsive tweak for small screens */
 @media (max-width: 420px) {
   .hero-photo img { object-position: 60% center; }
 }
@@ -361,7 +348,7 @@ section + section{ border-top: 1px solid var(--line); }
 }
 .tl-item .meta{ font-family: var(--mono); font-size: 12px; color: var(--slate); text-transform:uppercase; letter-spacing:.05em; }
 
-/* ---------- placeholder callouts (things Nathan must fill in) ---------- */
+/* ---------- placeholder callouts ---------- */
 .todo{
   background: #FBF3E7;
   border: 1px dashed var(--brass);
@@ -432,6 +419,7 @@ section + section{ border-top: 1px solid var(--line); }
   justify-self: end;
 }
 @media (max-width: 860px){ .evidence{ max-width: 320px; justify-self: start; margin: 0 auto; } }
+
 .evidence-page{
   aspect-ratio: 210 / 297; /* true A4 ratio */
   width: 100%;
@@ -445,17 +433,16 @@ section + section{ border-top: 1px solid var(--line); }
 .evidence-page.landscape{
   aspect-ratio: 16 / 9;
 }
-.evidence-page.contain img{
-  object-fit: contain;
-  object-position: center;
-  background: var(--paper-dim);
-}
-
 .evidence-page img{
   width:100%; height:100%;
   object-fit: cover;
   object-position: 70% center;
   display:block;
+}
+.evidence-page.contain img{
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper-dim);
 }
 .evidence-page .no-doc{
   width:100%; height:100%;
@@ -467,6 +454,7 @@ section + section{ border-top: 1px solid var(--line); }
   color: var(--slate);
   background: repeating-linear-gradient(135deg, var(--paper-dim), var(--paper-dim) 8px, var(--paper) 8px, var(--paper) 16px);
 }
+
 .evidence-photo{
   aspect-ratio: 210/297;
   width:100%;
@@ -475,32 +463,12 @@ section + section{ border-top: 1px solid var(--line); }
   margin-bottom: 10px;
 }
 .evidence-photo img{ width:100%; height:100%; object-fit:cover; }
-
-/* make evidence-photo landscape when requested */
 .evidence-photo.landscape{ aspect-ratio: 4 / 3; }
 .evidence-photo.landscape img{ object-position: center; }
-
-/* small inline icons used across pages */
-.small-icon{ width:48px; height:48px; object-fit:contain; vertical-align:middle; margin-right:10px; }
-
-/* card-level landscape photo (for inserting images inside cards) */
-.card-photo{
-  width:100%;
-  overflow:hidden;
-  border: 1px solid var(--line);
-  margin-top: 12px;
-}
-.card-photo.landscape{ aspect-ratio: 4 / 3; }
-.card-photo.landscape img{ width:100%; height:100%; object-fit:cover; display:block; }
-
-/* icons placed before headings */
-.icon-before{
-  width: clamp(32px, 3.6vw, 48px);
-  height: auto;
+.evidence-photo.contain img{
   object-fit: contain;
-  vertical-align: middle;
-  margin-right: 10px;
-  display: inline-block;
+  object-position: center;
+  background: var(--paper-dim);
 }
 
 .evidence-caption{
@@ -529,7 +497,28 @@ section + section{ border-top: 1px solid var(--line); }
 .evidence-links a:hover{ border-color: var(--brass); color: var(--brass-deep); }
 .evidence-links a::before{ content:"↳ "; color: var(--brass); }
 
-/* ---------- full document viewer (used on click-through / dedicated viewer sections) ---------- */
+/* ---------- small inline icons ---------- */
+.small-icon{ width:48px; height:48px; object-fit:contain; vertical-align:middle; margin-right:10px; }
+.icon-before{
+  width: clamp(32px, 3.6vw, 48px);
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* ---------- card-level landscape photo ---------- */
+.card-photo{
+  width:100%;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  margin-top: 12px;
+}
+.card-photo.landscape{ aspect-ratio: 4 / 3; }
+.card-photo.landscape img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ---------- full document viewer ---------- */
 .doc-viewer{
   width: 100%;
   height: 70vh;
@@ -550,7 +539,4 @@ section + section{ border-top: 1px solid var(--line); }
 }
 
 /* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior:auto; }
-  .card, .btn{ transition:none; }
-}
+@media
