@@ -183,7 +183,9 @@ section + section{ border-top: 1px solid var(--line); }
   padding: 20px;
   overflow:hidden;
 }
-.hero-photo img{ width:100%; height:100%; object-fit:cover; }
+.hero-photo img{
+  width:100%; height:100%; object-fit:cover; object-position:70% center;
+}
 .hero-actions{ display:flex; gap: 14px; margin-top: 28px; flex-wrap:wrap; }
 
 /* ---------- buttons ---------- */
